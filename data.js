@@ -103,3 +103,243 @@ window.LEO_CIGAR_DATA = {
     {id:47,brand:"Toscano",name:"自然甜感 · 大盒（系列待核）",origin:"意大利",flavors:["甜感","木质","香料","咖啡"],strength:"中等",price:"$9.05 / 盒",stock:"2盒历史购买",knownQty:"2盒",note:"旧站使用 Garibaldi 甜润风格参考图，不代表确认型号"}
   ]
 };
+
+// Product images restored from public retailer/brand listings. Series references are explicitly labeled.
+window.LEO_CIGAR_IMAGES = {
+  "1": {
+    "url": "https://mybevstore.com/cdn/shop/files/MyBev-Product-Images-Cigars-Macanudo-Court-Cafe.png?v=1701962738&width=1200",
+    "source": "My Bev Store",
+    "status": "型号图"
+  },
+  "2": {
+    "url": "https://www.turmeaus.co.uk/images/CharterOakCTPetitCorona8%281%29.JPG",
+    "source": "Turmeaus",
+    "status": "型号图"
+  },
+  "3": {
+    "url": "https://img.thompsoncigar.com/products/iris/bgwhite/wgb-pm-1007.png?v=214323",
+    "source": "Thompson Cigar",
+    "status": "型号图"
+  },
+  "4": {
+    "url": "https://mikescigars.com/media/catalog/product/cache/06e4c451197453e67f718945f1975457/image/12056db91/arturo-fuente-breva-royal.jpg",
+    "source": "Mike's Cigars",
+    "status": "型号图"
+  },
+  "5": {
+    "url": "https://whiskeycaviar.com/cdn/shop/files/fireballcigars.jpg?v=1708191692",
+    "source": "Whiskey Caviar",
+    "status": "型号图"
+  },
+  "6": {
+    "url": "https://images.neptunecigar.com/prodimgl/220508_0.jpg?dummy=125419793",
+    "source": "Neptune Cigar",
+    "status": "型号图"
+  },
+  "7": {
+    "url": "https://www.rauchr.de/bilder/detail/big2048/66_48652_108458.jpg",
+    "source": "Rauchr",
+    "status": "型号图"
+  },
+  "8": {
+    "url": "https://cdn11.bigcommerce.com/s-o6xcpm5lql/images/stencil/1280x1280/products/3265/14031/punch-elite-cigars-25-ct-box__54286.1761000003.jpg?c=2",
+    "source": "Buitrago Cigars",
+    "status": "系列/规格参考图"
+  },
+  "9": {
+    "url": "https://www.thompsoncigar.com/dw/image/v2/BKCV_PRD/on/demandware.static/-/Sites-stg-master-catalog/default/dw4e448c80/TC/GAJ-PM-1034_Open.png?sh=800&sw=800",
+    "source": "Thompson Cigar",
+    "status": "系列参考图"
+  },
+  "10": {
+    "url": "https://online-cigars.com/media/catalog/product/cache/7420fd2433b126a67d332586266f4e0d/o/l/oliva_connecticut_reserve_robusto_cigar-box.jpg",
+    "source": "Online Cigars",
+    "status": "型号图"
+  },
+  "11": {
+    "url": "https://images.famous-smoke.com/image/upload/c_lpad%2Cdpr_2.0%2Cf_auto%2Ch_565%2Cq_auto%2Cw_565/v1/skupics/ems/CI-EMS-CHUN-20-BOX.jpg?_i=AB",
+    "source": "Famous Smoke",
+    "status": "型号图"
+  },
+  "12": {
+    "url": "https://d2j6dbq0eux0bg.cloudfront.net/images/26385243/3072752012.jpg",
+    "source": "Community Cigar",
+    "status": "型号图"
+  },
+  "13": {
+    "url": "https://www.cigarsindia.in/cdn/shop/products/Baccarat_Toro_Box_of_25_Cigars_India_Cigars_Online_India_500x_crop_center.jpg?v=1527288191",
+    "source": "Cigars India",
+    "status": "型号图"
+  },
+  "14": {
+    "url": "https://cdn11.bigcommerce.com/s-bxgh7p/images/stencil/1280x1280/products/5396/15394/Perdomo_20_Anniversario_Epicure_Connecticut__95538.1641582437.jpg?c=2",
+    "source": "Cigars Crafters",
+    "status": "型号图"
+  },
+  "15": {
+    "url": "https://c647068.ssl.cf2.rackcdn.com/products/007-965-0019.5957.jpg",
+    "source": "Smokingpipes CDN",
+    "status": "型号图"
+  },
+  "16": {
+    "url": "https://images.squarespace-cdn.com/content/v1/58095566bebafb6ff02a719c/1612924657660-3DQJSZQ5XSX7F4OKJ43F/fuente%2Bbrevas.png",
+    "source": "Smoke Ring Cigars",
+    "status": "型号图"
+  },
+  "17": {
+    "url": "https://mikescigars.com/media/catalog/product/cache/06e4c451197453e67f718945f1975457/image/14647e4a7/isla-del-sol-robusto.jpg",
+    "source": "Mike's Cigars",
+    "status": "系列参考图"
+  },
+  "18": {
+    "url": "https://img.cigarsinternational.com/product/iris/bgwhite/wd500/3sp-pm-1003_closed.png?format=jpg&quality=84&v=614744",
+    "source": "Cigars International",
+    "status": "型号/系列图"
+  },
+  "19": {
+    "url": "https://c647068.ssl.cf2.rackcdn.com/products/007-023-0096.9995.jpg",
+    "source": "Smokingpipes CDN",
+    "status": "型号图"
+  },
+  "20": {
+    "url": "https://cdn11.bigcommerce.com/s-2ooutu2zpl/products/37999/images/40905/Tatuaje-Brown-Petite-Cazadores-Reserva__26698.1509506828.500.750.jpg?c=2",
+    "source": "Atlantic Cigar",
+    "status": "型号图"
+  },
+  "21": {
+    "url": "https://images.neptunecigar.com/prodimgo/394435_0.jpg?dummy=115932190",
+    "source": "Neptune Cigar",
+    "status": "型号图"
+  },
+  "22": {
+    "url": "https://cdn11.bigcommerce.com/s-bxgh7p/images/stencil/1280x1280/products/6052/22530/Baccarat_The_Game_Luchadores_Open_Box__93914.1701994039.png?c=2",
+    "source": "Cigars Crafters",
+    "status": "型号图"
+  },
+  "23": {
+    "url": "https://cdn11.bigcommerce.com/s-3962a/images/stencil/1280w/products/25620/22287/AF_Montesino_Natural__54229.1634183891.jpg?c=2",
+    "source": "Cuenca Cigars",
+    "status": "Natural 系列参考图"
+  },
+  "24": {
+    "url": "https://cdn11.bigcommerce.com/s-2ooutu2zpl/images/stencil/2048x2048/products/42185/51030/ABC-01-1026E-BX__44888.1630422269.jpg?c=2",
+    "source": "Atlantic Cigar",
+    "status": "型号图"
+  },
+  "25": {
+    "url": "https://www.noblego.de/media/catalog/product/cache/2/image/650x/2c358c4eafc8ea179ce42cd6999e815d/r/o/rojas_breakfast_tacos_connecticut_petit_salomon_05.jpg",
+    "source": "Noblego",
+    "status": "系列参考图"
+  },
+  "26": {
+    "url": "https://www.thompsoncigar.com/dw/image/v2/BKCV_PRD/on/demandware.static/-/Sites-stg-master-catalog/default/dw677833c7/TC/j2i-pm-1012.png?sh=800&sw=800",
+    "source": "Thompson Cigar",
+    "status": "型号图"
+  },
+  "27": {
+    "url": "https://www.dymka-doutniky.cz/fotky78146/facebook/doutniky-joya-de-nicaragua-red-cigarillos-10ks-dymka-doutniky-cz-.jpg",
+    "source": "Dymka",
+    "status": "型号图"
+  },
+  "28": {
+    "url": "https://www.cigarsinternational.com/dw/image/v2/BKCV_PRD/on/demandware.static/-/Sites-stg-master-catalog/default/dwdd96c4e5/CI/JC1-PM-1001.png?sh=800&sw=800",
+    "source": "Cigars International",
+    "status": "型号图"
+  },
+  "29": {
+    "url": "https://70cigars.com/cdn/shop/files/photo_2026-02-19_19-36-05.jpg?v=1771547782&width=1080",
+    "source": "70Cigars",
+    "status": "Habano 系列参考图"
+  },
+  "30": {
+    "url": "https://70cigars.com/cdn/shop/files/photo_2026-02-19_19-37-19.jpg?v=1771547861&width=720",
+    "source": "70Cigars",
+    "status": "Connecticut 系列参考图"
+  },
+  "31": {
+    "url": "https://70cigars.com/cdn/shop/files/Dominican_Cream_Churchill-110309_1.jpg?v=1761671271&width=1000",
+    "source": "70Cigars",
+    "status": "型号图"
+  },
+  "32": {
+    "url": "https://70cigars.com/cdn/shop/files/Dominican_Cream_Robusto-110539.jpg?v=1761671717",
+    "source": "70Cigars",
+    "status": "型号图"
+  },
+  "33": {
+    "url": "https://www.dalayzigarren.de/media/image/product/7519/lg/plasencia-reserva-original-robusto.jpg",
+    "source": "Dalay Zigarren",
+    "status": "型号图"
+  },
+  "34": {
+    "url": "https://www.holts.com/media/categoryimage/r/o/rocky-patel-vintage-1990_2.png",
+    "source": "Holt's",
+    "status": "系列图"
+  },
+  "35": {
+    "url": "https://www.cigar.com/dw/image/v2/BKCV_PRD/on/demandware.static/-/Sites-stg-master-catalog/default/dwb9170cb5/CCOM/CS-GAY.png?sh=800&sw=800",
+    "source": "CIGAR.com",
+    "status": "系列参考图"
+  },
+  "36": {
+    "url": "https://www.thompsoncigar.com/dw/image/v2/BKCV_PRD/on/demandware.static/-/Sites-stg-master-catalog/default/dwca214f9c/TC/SH7-PM-1000.png?sh=800&sw=800",
+    "source": "Thompson Cigar",
+    "status": "系列图"
+  },
+  "37": {
+    "url": "https://cdn11.bigcommerce.com/s-6ihhxuk/images/stencil/1280x1280/products/13948/67451/Jose_L_Piedra_Cazadores_2__02331__32715__08680.1728566924.JPG?c=2",
+    "source": "GQ Tobaccos",
+    "status": "型号图"
+  },
+  "38": {
+    "url": "https://cdn11.bigcommerce.com/s-1a5b5/products/9312/images/13423/perdomo_habanobba_sg_gordo_wm_bx__11219.1446357584.600.600.jpg?c=2",
+    "source": "Cigar King",
+    "status": "系列参考图"
+  },
+  "39": {
+    "url": "https://images.famous-smoke.com/image/upload/c_lpad%2Cdpr_2.0%2Cf_auto%2Cq_auto/v1/skupics/enw/ci-enw-brin.jpg?_i=AB",
+    "source": "Famous Smoke",
+    "status": "系列图"
+  },
+  "40": {
+    "url": "https://cubancigaronline.com/wp-content/uploads/2017/08/2.jpg",
+    "source": "Cuban Cigar Online",
+    "status": "型号参考图"
+  },
+  "41": {
+    "url": "https://lacasadelhabanocdmx.com/cdn/shop/files/h_upmann-coronas_major-anilla_1024x.jpg?v=1744083776",
+    "source": "La Casa del Habano CDMX",
+    "status": "型号参考图"
+  },
+  "42": {
+    "url": "https://cdn.shopify.com/s/files/1/0726/6071/3769/articles/PRB-PM-1028.png?v=1679156912",
+    "source": "CigarHaus",
+    "status": "系列图"
+  },
+  "43": {
+    "url": "https://italiansmokes.com/cdn/shop/files/ITAS305-08-Image-A_800x800_8468bf51-0c92-4fc9-9205-ce08ee4f2009.jpg?v=1731430090",
+    "source": "ItalianSmokes",
+    "status": "型号图"
+  },
+  "44": {
+    "url": "https://leafaffair.com/cdn/shop/products/Aroma_Grappa_Box_grande.jpg?v=1532457651",
+    "source": "The Leaf Affair",
+    "status": "型号图"
+  },
+  "45": {
+    "url": "https://tabak-sommer.de/media/3a/ce/8a/1722036590/toscanello-rosso.png?ts=1730201964",
+    "source": "Tabak Sommer",
+    "status": "型号图"
+  },
+  "46": {
+    "url": "https://cdn11.bigcommerce.com/s-mdpjfu7lb2/images/stencil/original/products/10442/8977/TOSC_ORIGI_N_BX-open__66431.1742152965.png?c=1",
+    "source": "Tobacconist of Greenwich",
+    "status": "型号图"
+  },
+  "47": {
+    "url": "https://cdn.awsli.com.br/2500x2500/2710/2710271/produto/399891375/cx-16-h8g95cg8n0.png",
+    "source": "Mata Fina",
+    "status": "Garibaldi 风格参考图"
+  }
+};
+window.LEO_CIGAR_DATA.cigars.forEach(c=>Object.assign(c, window.LEO_CIGAR_IMAGES[c.id]||{}));
