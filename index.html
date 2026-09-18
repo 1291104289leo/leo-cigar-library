@@ -3,25 +3,166 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Leo Cigar Library</title>
+<meta name="theme-color" content="#17120e">
+<title>Leo Cigar Library · THE CIGAR ARCHIVE</title>
 <style>
-body{font-family:system-ui,-apple-system,sans-serif;margin:0;background:#15120f;color:#f4eadb}
-main{max-width:900px;margin:auto;padding:72px 24px}
-.badge{display:inline-block;padding:7px 12px;border:1px solid #a66a2c;border-radius:999px;color:#d8a35d}
-h1{font-size:clamp(42px,8vw,78px);line-height:.95;margin:24px 0}
-p{max-width:650px;color:#c9b9a6;font-size:18px;line-height:1.7}
-.card{margin-top:44px;padding:28px;border:1px solid #403329;border-radius:20px;background:#1e1915}
+:root{--bg:#15110e;--panel:#1d1713;--panel2:#241c17;--line:#443329;--text:#f5eadc;--muted:#bcae9d;--accent:#d18b3c;--accent2:#f0bd73;--ok:#8fb27a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 90% 0,#332217 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit}.wrap{max-width:1240px;margin:auto;padding:0 22px}.hero{padding:70px 0 32px;border-bottom:1px solid var(--line)}
+.kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #8d5d2d;border-radius:999px;color:var(--accent2);font-size:12px;letter-spacing:.12em}
+h1{font-size:clamp(48px,8vw,92px);line-height:.88;margin:25px 0 18px;letter-spacing:-.055em}.lead{max-width:760px;color:var(--muted);font-size:18px;line-height:1.7}.hero-note{margin-top:14px;color:#8e8174;font-size:13px}
+.nav{position:sticky;top:0;z-index:20;background:#15110eea;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;gap:8px;overflow:auto;padding:12px 0}.nav button,.chip,.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:9px 14px;cursor:pointer;white-space:nowrap}.nav button.active,.chip.active,.btn.primary{border-color:#a56d36;background:#3b2718;color:#ffd89b}
+section{padding:34px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}.section-title h2{margin:0;font-size:28px}.section-title p{margin:0;color:var(--muted)}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:linear-gradient(180deg,#241b15,#1a1512);border:1px solid var(--line);border-radius:18px;padding:20px}.stat b{display:block;font-size:28px;margin:5px 0}.stat small{color:var(--muted);line-height:1.45}.stat .label{color:var(--accent2);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin-bottom:12px}.filters input,.filters select{width:100%;border:1px solid var(--line);background:#100d0b;color:var(--text);border-radius:12px;padding:12px 13px;outline:none}.flavor-row{display:flex;gap:8px;overflow:auto;padding:4px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{border:1px solid var(--line);background:linear-gradient(180deg,#211914,#191410);border-radius:18px;padding:18px;cursor:pointer;transition:.18s transform,.18s border-color}.card:hover{transform:translateY(-2px);border-color:#8c6138}.no{font-size:11px;color:#8d7c6b;letter-spacing:.1em}.brand{font-size:12px;color:var(--accent2);text-transform:uppercase;letter-spacing:.08em;margin-top:11px}.name{font-size:19px;font-weight:750;line-height:1.25;margin:5px 0 13px}.meta{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:12px;color:#d9cbb9;border:1px solid #4d3b30;background:#17120f;border-radius:999px;padding:5px 8px}.price{margin-top:14px;color:#ead5bd}.stock{color:#9c8f82;font-size:12px;margin-top:6px}
+.empty{grid-column:1/-1;border:1px dashed var(--line);padding:40px;text-align:center;color:var(--muted);border-radius:16px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.panel h3{margin-top:0}.bar-row{display:grid;grid-template-columns:130px 1fr 34px;gap:10px;align-items:center;margin:10px 0;color:#d8cab8;font-size:13px}.bar{height:8px;background:#33271f;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#8b592c,#e2a55c)}
+.timeline{display:grid;gap:10px}.event{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid #372b23}.event time{color:var(--accent2);font-size:13px}.event b{display:block;margin-bottom:4px}.event span{color:var(--muted);line-height:1.55}
+.rule{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #372b23;color:#d9cabb;line-height:1.55}.rule i{font-style:normal;color:var(--ok)}
+.pref{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.italy-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.italy-item{background:#17120f;border:1px solid var(--line);border-radius:12px;padding:12px}.italy-item b{font-size:13px}.italy-item strong{display:block;color:var(--accent2);margin-top:7px}
+footer{padding:40px 0 70px;border-top:1px solid var(--line);color:#8f8275;font-size:13px}
+dialog{width:min(760px,calc(100% - 24px));border:1px solid #684a32;border-radius:20px;background:#18130f;color:var(--text);padding:0;box-shadow:0 30px 120px #0009}dialog::backdrop{background:#050403c7;backdrop-filter:blur(4px)}.modal-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.modal-body{padding:22px}.x{border:1px solid var(--line);background:#251c16;color:white;border-radius:50%;width:36px;height:36px;cursor:pointer}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.detail{border:1px solid var(--line);border-radius:12px;padding:12px}.detail small{display:block;color:#8f8173}.similar{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sim{border:1px solid var(--line);border-radius:12px;padding:11px;background:#120f0c}.sim b{font-size:13px}.sim span{display:block;color:#9d8d7c;font-size:12px;margin-top:3px}
+.hidden{display:none!important}
+@media(max-width:900px){.summary,.grid{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.italy-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.summary,.grid,.filters{grid-template-columns:1fr}.hero{padding-top:48px}.event{grid-template-columns:1fr;gap:5px}.detail-grid,.similar{grid-template-columns:1fr}.italy-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-<main>
-<span class="badge">LEO'S COLLECTION</span>
-<h1>Leo Cigar<br>Library</h1>
-<p>一个用于记录、整理和探索个人雪茄收藏的数字资料库。未来这里会记录库存、风味、购买与到货时间、养护状态以及个人品吸笔记。</p>
-<div class="card">
-<h2>🥃 Library is growing.</h2>
-<p>这是项目的第一个版本。下一步：加入雪茄库存卡片、搜索筛选、养护天数和可视化统计。</p>
-</div>
+<header class="hero"><div class="wrap">
+  <span class="kicker">L · COLLECTION / 2026</span>
+  <h1>Leo Cigar<br>Library</h1>
+  <p class="lead">订单、到货、养护、风味、价格与收藏历史统一归档。此 GitHub 版本以你此前项目中的旧站 v3 为基线，保留“已确认 / 待盘点 / 待核实”的边界，不把历史购买量冒充现存库存。</p>
+  <div class="hero-note" id="verified"></div>
+</div></header>
+
+<nav class="nav"><div class="wrap nav-inner">
+  <button data-go="collection" class="active">我的收藏</button>
+  <button data-go="stats">收藏统计</button>
+  <button data-go="timeline">订单与到货</button>
+  <button data-go="italian">意大利库存</button>
+  <button data-go="rules">网站规则</button>
+</div></nav>
+
+<main class="wrap">
+<section id="overview">
+  <div class="section-title"><div><h2>收藏总览</h2><p>来自旧站、订单核对与项目记录的统一快照</p></div></div>
+  <div class="summary" id="summary"></div>
+</section>
+
+<section id="collection">
+  <div class="section-title"><div><h2>我的收藏</h2><p id="resultCount"></p></div><button class="btn" id="reset">重置筛选</button></div>
+  <div class="filters">
+    <input id="q" placeholder="搜索品牌、型号、产地、备注…">
+    <select id="origin"><option value="">全部产地</option></select>
+    <select id="strength"><option value="">全部浓郁度</option></select>
+  </div>
+  <div class="flavor-row" id="flavors"></div>
+  <div class="grid" id="cards"></div>
+</section>
+
+<section id="stats">
+  <div class="section-title"><div><h2>收藏统计</h2><p>按当前47款确认记录计算</p></div></div>
+  <div class="cols">
+    <div class="panel"><h3>产地</h3><div id="originStats"></div></div>
+    <div class="panel"><h3>浓郁度</h3><div id="strengthStats"></div></div>
+    <div class="panel"><h3>高频风味</h3><div id="flavorStats"></div></div>
+    <div class="panel"><h3>你的偏好模型</h3><p id="profile" style="color:var(--muted);line-height:1.65"></p><div class="pref" id="prefTags"></div><p style="color:#9e8d7c">回避：<span id="avoid"></span></p></div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-title"><div><h2>订单 / 到货时间线</h2><p>这里只写有依据的日期；缺失日期不自动编造</p></div></div>
+  <div class="panel timeline" id="timelineList"></div>
+</section>
+
+<section id="italian">
+  <div class="section-title"><div><h2>意大利 Toscano / Toscanello</h2><p>14盒最终采购清单</p></div></div>
+  <div class="panel">
+    <p style="color:var(--muted)">最终记录：货款 <b style="color:var(--text)">€96.80</b> + 代购费 <b style="color:var(--text)">¥100</b>。此前旧站按汇率/分摊形成约 $9.04–9.05 / 盒的落地均价展示。</p>
+    <div class="italy-grid" id="italyItems"></div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="section-title"><div><h2>网站规则与要求</h2><p>把你之前对雪茄库网站提出的要求直接写进项目，避免以后越改越偏</p></div></div>
+  <div class="panel" id="rulesList"></div>
+</section>
 </main>
+
+<footer><div class="wrap">Leo / THE CIGAR ARCHIVE · GitHub 数据版 · 商品图与完整三平台评价正文将按来源逐款迁移；待确认信息不会被自动“补全”。</div></footer>
+
+<dialog id="detailModal">
+  <div class="modal-head"><div><div class="brand" id="mBrand"></div><div class="name" id="mName" style="font-size:25px"></div></div><button class="x" id="closeModal">×</button></div>
+  <div class="modal-body" id="modalBody"></div>
+</dialog>
+
+<script src="data.js"></script>
+<script>
+const D=window.LEO_CIGAR_DATA, cigars=D.cigars;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+$("#verified").textContent="资料核对："+D.meta.verifiedAt+" · "+D.meta.confirmedVarieties+"款确认收藏 · "+D.meta.notes;
+$("#summary").innerHTML=D.inventorySummary.map(x=>'<div class="stat"><div class="label">'+x.label+'</div><b>'+x.value+'</b><small>'+x.note+'</small></div>').join("");
+$("#profile").textContent=D.preferences.profile;
+$("#prefTags").innerHTML=D.preferences.flavors.map(x=>'<span class="tag">'+x+'</span>').join("");
+$("#avoid").textContent=D.preferences.avoid.join("、");
+
+const origins=[...new Set(cigars.map(x=>x.origin))].sort();
+origins.forEach(v=>$("#origin").insertAdjacentHTML("beforeend",'<option>'+v+'</option>'));
+const strengths=[...new Set(cigars.map(x=>x.strength))].sort();
+strengths.forEach(v=>$("#strength").insertAdjacentHTML("beforeend",'<option>'+v+'</option>'));
+const flavorPool=[...new Set(cigars.flatMap(x=>x.flavors).filter(x=>x!=="待核实"))].sort();
+let activeFlavors=new Set;
+$("#flavors").innerHTML=flavorPool.map(f=>'<button class="chip" data-flavor="'+f+'">'+f+'</button>').join("");
+$("#flavors").addEventListener("click",e=>{const b=e.target.closest("[data-flavor]");if(!b)return;const f=b.dataset.flavor;activeFlavors.has(f)?activeFlavors.delete(f):activeFlavors.add(f);b.classList.toggle("active");renderCards()});
+
+function card(c){return '<article class="card" data-id="'+c.id+'"><div class="no">NO. '+String(c.id).padStart(2,"0")+'</div><div class="brand">'+c.brand+'</div><div class="name">'+c.name+'</div><div class="meta"><span class="tag">'+c.origin+'</span><span class="tag">'+c.strength+'</span>'+c.flavors.slice(0,3).map(f=>'<span class="tag">'+f+'</span>').join("")+'</div><div class="price">'+c.price+'</div><div class="stock">'+(c.knownQty?'记录数量：'+c.knownQty+' · ':'')+'现存：'+c.stock+'</div></article>'}
+function renderCards(){
+ const q=$("#q").value.trim().toLowerCase(), o=$("#origin").value, s=$("#strength").value;
+ const list=cigars.filter(c=>{
+   const txt=JSON.stringify(c).toLowerCase();
+   return (!q||txt.includes(q))&&(!o||c.origin===o)&&(!s||c.strength===s)&&[...activeFlavors].every(f=>c.flavors.includes(f));
+ });
+ $("#resultCount").textContent="显示 "+list.length+" / "+cigars.length+" 款";
+ $("#cards").innerHTML=list.length?list.map(card).join(""):'<div class="empty">没有符合当前筛选条件的记录</div>';
+}
+["q","origin","strength"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",renderCards));
+$("#reset").onclick=()=>{$("#q").value="";$("#origin").value="";$("#strength").value="";activeFlavors.clear();$$(".chip").forEach(x=>x.classList.remove("active"));renderCards()};
+renderCards();
+
+function countBy(fn){const m={};cigars.forEach(c=>{const vs=fn(c);(Array.isArray(vs)?vs:[vs]).forEach(v=>{if(v&&v!=="待核实")m[v]=(m[v]||0)+1})});return Object.entries(m).sort((a,b)=>b[1]-a[1])}
+function bars(el,entries,maxItems=20){const max=Math.max(...entries.map(x=>x[1]),1);$(el).innerHTML=entries.slice(0,maxItems).map(([k,v])=>'<div class="bar-row"><span>'+k+'</span><div class="bar"><i style="width:'+(v/max*100)+'%"></i></div><b>'+v+'</b></div>').join("")}
+bars("#originStats",countBy(c=>c.origin));bars("#strengthStats",countBy(c=>c.strength));bars("#flavorStats",countBy(c=>c.flavors),12);
+
+$("#timelineList").innerHTML=D.timeline.map(e=>'<div class="event"><time>'+e.date+'</time><div><b>'+e.title+'</b><span>'+e.detail+'</span></div></div>').join("");
+$("#italyItems").innerHTML=D.italian.items.map(x=>'<div class="italy-item"><b>'+x.name+'</b><strong>'+x.qty+x.unit+'</strong></div>').join("");
+$("#rulesList").innerHTML=D.rules.map((r,i)=>'<div class="rule"><i>0'+(i+1)+'</i><span>'+r+'</span></div>').join("");
+
+function dayDiff(a,b){return Math.floor((new Date(b)-new Date(a))/86400000)}
+function addDays(d,n){const x=new Date(d+"T12:00:00");x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)}
+function arrival(c){if(c.arrivalDate)return {date:c.arrivalDate,label:"实际记录"};if(c.purchaseDate)return {date:addDays(c.purchaseDate,20),label:"按+20天估算"};if(c.shipDate)return {date:addDays(c.shipDate,20),label:"按发货+20天估算"};return null}
+function similar(c){return cigars.filter(x=>x.id!==c.id).map(x=>({x,score:x.flavors.filter(f=>c.flavors.includes(f)&&f!=="待核实").length})).filter(z=>z.score>0).sort((a,b)=>b.score-a.score).slice(0,6)}
+$("#cards").addEventListener("click",e=>{const card=e.target.closest("[data-id]");if(!card)return;openDetail(+card.dataset.id)});
+function openDetail(id){
+ const c=cigars.find(x=>x.id===id), a=arrival(c), sims=similar(c);
+ $("#mBrand").textContent=c.brand;$("#mName").textContent=c.name;
+ const age=a?Math.max(0,dayDiff(a.date,new Date().toISOString().slice(0,10))):null;
+ $("#modalBody").innerHTML=
+ '<div class="meta">'+['NO. '+String(c.id).padStart(2,"0"),c.origin,c.strength,...c.flavors].map(x=>'<span class="tag">'+x+'</span>').join("")+'</div>'+
+ '<div class="detail-grid">'+
+ '<div class="detail"><small>价格 / 估值</small>'+c.price+'</div>'+
+ '<div class="detail"><small>现存余量</small>'+c.stock+(c.knownQty?'<br><small>已知历史数量：'+c.knownQty+'</small>':'')+'</div>'+
+ '<div class="detail"><small>购买时间</small>'+(c.purchaseDate||"待补录")+'</div>'+
+ '<div class="detail"><small>到货 / 养护</small>'+(a?(a.date+' · '+a.label+(age!==null?' · 已养护约 '+age+' 天':'')):"待补录")+'</div>'+
+ '</div>'+
+ (c.note?'<div class="detail"><small>核对备注</small>'+c.note+'</div>':'')+
+ '<h3>相似风味</h3><div class="similar">'+(sims.length?sims.map(z=>'<div class="sim"><b>'+z.x.brand+' · '+z.x.name+'</b><span>重合 '+z.score+' 个风味 · '+z.x.stock+'</span></div>').join(""):'<div class="sim">暂无足够风味数据</div>')+'</div>'+
+ '<h3>评价 / 图片迁移状态</h3><p style="color:var(--muted);line-height:1.6">旧站已把47款纳入“全网评价”框架；GitHub 版先保留结构与数据边界。完整三平台评价正文和商品图将在下一轮按 SP → 70Cigars → 品牌官网的顺序逐款迁移，不用无法核实的内容填空。</p>';
+ $("#detailModal").showModal();
+}
+$("#closeModal").onclick=()=>$("#detailModal").close();
+$("#detailModal").addEventListener("click",e=>{if(e.target===$("#detailModal"))$("#detailModal").close()});
+$$(".nav button").forEach(b=>b.onclick=()=>{document.getElementById(b.dataset.go).scrollIntoView({behavior:"smooth"});$$(".nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active")});
+</script>
 </body>
 </html>
