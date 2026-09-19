@@ -24,8 +24,9 @@ section{padding:34px 0}.section-title{display:flex;align-items:end;justify-conte
 .pref{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.italy-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.italy-item{background:#17120f;border:1px solid var(--line);border-radius:12px;padding:12px}.italy-item b{font-size:13px}.italy-item strong{display:block;color:var(--accent2);margin-top:7px}
 footer{padding:40px 0 70px;border-top:1px solid var(--line);color:#8f8275;font-size:13px}
 dialog{width:min(760px,calc(100% - 24px));border:1px solid #684a32;border-radius:20px;background:#18130f;color:var(--text);padding:0;box-shadow:0 30px 120px #0009}dialog::backdrop{background:#050403c7;backdrop-filter:blur(4px)}.modal-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.modal-body{padding:22px}.modal-photo{height:360px;background:#f3efe9;border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:16px}.modal-photo img{width:100%;height:100%;object-fit:contain}.img-credit{font-size:11px;color:#8f8173;margin:-8px 0 16px}.x{border:1px solid var(--line);background:#251c16;color:white;border-radius:50%;width:36px;height:36px;cursor:pointer}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.detail{border:1px solid var(--line);border-radius:12px;padding:12px}.detail small{display:block;color:#8f8173}.similar{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sim{border:1px solid var(--line);border-radius:12px;padding:11px;background:#120f0c}.sim b{font-size:13px}.sim span{display:block;color:#9d8d7c;font-size:12px;margin-top:3px}
+.wish-method{margin-bottom:14px}.wish-method p{color:#edd9bf;line-height:1.6;margin:7px 0}.wish-method small{color:var(--muted);line-height:1.5}.wish-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.wish-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.wish-card{border:1px solid var(--line);background:linear-gradient(160deg,#251c16,#17120f);border-radius:18px;padding:19px}.wish-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.wish-score{font-weight:800;color:#ffd18d;font-size:19px}.wish-status{font-size:12px;border-radius:99px;border:1px solid #72523a;padding:5px 8px;color:#e7c6a1}.wish-status.available{color:#b9dda7;border-color:#547148}.wish-status.out{color:#efa9a1;border-color:#9a584f}.wish-status.review{color:#f3d293;border-color:#9f773b}.wish-status.unknown{color:#c8bbad}.wish-card h3{font-size:19px;line-height:1.3;margin:10px 0}.wish-card p{color:var(--muted);line-height:1.55;margin:8px 0}.wish-price{color:#f0bd73;font-size:21px;font-weight:750}.wish-price small{display:block;color:#a99a89;font-size:12px;font-weight:400;margin-top:2px}.wish-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.wish-links a{border:1px solid #6b513b;border-radius:99px;padding:7px 10px;color:#f2d4aa;text-decoration:none;font-size:12px}.wish-links a:hover{background:#403020}.wish-note{font-size:12px;border-top:1px solid #403126;padding-top:10px}.wish-excluded{margin-top:16px}.wish-excluded summary{cursor:pointer;color:var(--accent2);font-weight:700}.wish-excluded article{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.wish-excluded article p{color:var(--muted);line-height:1.5}
 .hidden{display:none!important}
-@media(max-width:900px){.summary,.grid{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.italy-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.summary,.grid,.filters{grid-template-columns:1fr}.hero{padding-top:48px}.event{grid-template-columns:1fr;gap:5px}.detail-grid,.similar{grid-template-columns:1fr}.italy-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.summary,.grid{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.italy-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.summary,.grid,.filters,.wish-grid{grid-template-columns:1fr}.hero{padding-top:48px}.event{grid-template-columns:1fr;gap:5px}.detail-grid,.similar{grid-template-columns:1fr}.italy-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -38,6 +39,7 @@ dialog{width:min(760px,calc(100% - 24px));border:1px solid #684a32;border-radius
 
 <nav class="nav"><div class="wrap nav-inner">
   <button data-go="collection" class="active">我的收藏</button>
+  <button data-go="wishlist">待购入</button>
   <button data-go="stats">收藏统计</button>
   <button data-go="timeline">订单与到货</button>
   <button data-go="italian">意大利库存</button>
@@ -59,6 +61,23 @@ dialog{width:min(760px,calc(100% - 24px));border:1px solid #684a32;border-radius
   </div>
   <div class="flavor-row" id="flavors"></div>
   <div class="grid" id="cards"></div>
+</section>
+
+<section id="wishlist">
+  <div class="section-title"><div><h2>待购入 · 高分轻中度</h2><p id="wishIntro"></p></div></div>
+  <div class="panel wish-method">
+    <strong>筛选口径</strong><p id="wishThreshold"></p>
+    <small>价格按美元单支，不含税费和运费；“参考价”不是商店现价。库存与折扣可能随时变化。SP = Smokingpipes，70 = 70Cigars；同系列不同规格不算同款。</small>
+  </div>
+  <div class="wish-toolbar" id="wishFilters" aria-label="待购入筛选">
+    <button class="chip active" data-wish-filter="all">全部</button>
+    <button class="chip" data-wish-filter="available">已核实有货</button>
+    <button class="chip" data-wish-filter="out">缺货监测</button>
+    <button class="chip" data-wish-filter="review">下单前复核</button>
+    <button class="chip" data-wish-filter="unknown">渠道待核实</button>
+  </div>
+  <div class="wish-grid" id="wishCards"></div>
+  <details class="panel wish-excluded"><summary>本轮排除的高分款 · 力度分歧和超标</summary><div id="wishExcluded"></div></details>
 </section>
 
 <section id="stats">
@@ -98,6 +117,7 @@ dialog{width:min(760px,calc(100% - 24px));border:1px solid #684a32;border-radius
 </dialog>
 
 <script src="data.js"></script>
+<script src="wishlist.js"></script>
 <script>
 const D=window.LEO_CIGAR_DATA, cigars=D.cigars;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -129,6 +149,21 @@ function renderCards(){
 ["q","origin","strength"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",renderCards));
 $("#reset").onclick=()=>{$("#q").value="";$("#origin").value="";$("#strength").value="";activeFlavors.clear();$$(".chip").forEach(x=>x.classList.remove("active"));renderCards()};
 renderCards();
+
+const W=window.LEO_CIGAR_WISHLIST;
+const wishEscape=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const wishLink=(x,kind)=>'<a href="'+wishEscape(x.url)+'" target="_blank" rel="noopener noreferrer">'+wishEscape(x.label)+(kind?" ↗":"")+'</a>';
+const wishStatus={available:"已核实有货",out:"缺货监测",review:"下单前复核",unknown:"渠道待核实"};
+$("#wishIntro").textContent="核查 "+W.checkedAt+" · "+W.items.length+" 款 · 可购 "+W.items.filter(x=>x.status==="available").length+" · 缺货监测 "+W.items.filter(x=>x.status==="out").length;
+$("#wishThreshold").textContent=W.threshold;
+$("#wishExcluded").innerHTML=W.excluded.map(x=>'<article><b>'+wishEscape(x.name)+'</b><p>'+wishEscape(x.why)+'</p><div class="wish-links">'+x.links.map(y=>wishLink(y,true)).join("")+'</div></article>').join("");
+let wishFilter="all";
+function renderWish(){
+ const list=W.items.filter(x=>wishFilter==="all"||x.status===wishFilter);
+ $("#wishCards").innerHTML=list.length?list.map(x=>'<article class="wish-card"><div class="wish-top"><span class="wish-score">'+wishEscape(x.score)+'</span><span class="wish-status '+x.status+'">'+wishStatus[x.status]+'</span></div><h3>'+wishEscape(x.name)+'</h3><div class="meta"><span class="tag">'+wishEscape(x.size)+'</span><span class="tag">'+wishEscape(x.strength)+'</span></div><p>'+wishEscape(x.flavor)+'</p><div class="wish-price">'+wishEscape(x.price)+'<small>'+wishEscape(x.priceKind)+'</small></div><div class="wish-links">'+x.stores.map(y=>wishLink(y,true)).join("")+x.sources.map(y=>wishLink(y,true)).join("")+'</div><p class="wish-note">'+wishEscape(x.note)+'</p></article>').join(""):'<div class="empty">此状态暂无条目</div>';
+}
+$("#wishFilters").addEventListener("click",e=>{const b=e.target.closest("[data-wish-filter]");if(!b)return;wishFilter=b.dataset.wishFilter;$("[data-wish-filter]").forEach(x=>x.classList.toggle("active",x===b));renderWish()});
+renderWish();
 
 function countBy(fn){const m={};cigars.forEach(c=>{const vs=fn(c);(Array.isArray(vs)?vs:[vs]).forEach(v=>{if(v&&v!=="待核实")m[v]=(m[v]||0)+1})});return Object.entries(m).sort((a,b)=>b[1]-a[1])}
 function bars(el,entries,maxItems=20){const max=Math.max(...entries.map(x=>x[1]),1);$(el).innerHTML=entries.slice(0,maxItems).map(([k,v])=>'<div class="bar-row"><span>'+k+'</span><div class="bar"><i style="width:'+(v/max*100)+'%"></i></div><b>'+v+'</b></div>').join("")}
