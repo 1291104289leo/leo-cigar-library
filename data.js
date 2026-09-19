@@ -90,7 +90,7 @@ window.LEO_CIGAR_DATA = {
     {id:34,brand:"Rocky Patel",name:"Vintage 1990",origin:"洪都拉斯",flavors:["木质"],strength:"中等",price:"赠送估值 $12.00 / 支",stock:"待盘点",source:"赠送",note:"具体尺寸待核对"},
     {id:35,brand:"Gran Habano",name:"Corojo No.5",origin:"洪都拉斯",flavors:["木质","香料","咖啡","甜感"],strength:"浓郁",price:"赠送估值 $8.50 / 支",stock:"待盘点",source:"赠送",note:"尺寸待确认"},
     {id:36,brand:"Sancho Panza",name:"Double Maduro",origin:"洪都拉斯",flavors:["咖啡","可可","香料","甜感"],strength:"中浓郁",price:"赠送估值 $7.49 / 支",stock:"待盘点",source:"赠送",note:"尺寸待确认"},
-    {id:37,brand:"José L. Piedra",name:"Cazadores",origin:"古巴",flavors:["木质","咖啡","甜感","香料"],strength:"中等",price:"赠送估值 $5.70 / 支",stock:"待盘点",source:"赠送"},
+    {id:37,brand:"José L. Piedra",name:"Cazadores",origin:"古巴",flavors:["木质","咖啡","甜感","香料"],strength:"中等",price:"赠送估值 $5.70 / 支",retailPrice:"£13.35 / 支",retailSource:"GQ Tobaccos",retailUrl:"https://gqtobaccos.com/cigars/jose-l-piedra-cazadores-single-cigar/",retailScreenshotDate:"2026-09-19",stock:"待盘点",source:"赠送"},
     {id:38,brand:"Perdomo",name:"Habano Bourbon Barrel-Aged（疑似）",origin:"尼加拉瓜",flavors:["咖啡","可可","甜感","香料"],strength:"中浓郁",price:"赠送估值 $10.42 / 支",stock:"待盘点",source:"赠送",note:"版本与尺寸待实物确认"},
     {id:39,brand:"E.P. Carrillo",name:"New Wave Connecticut（尺寸待确认）",origin:"多米尼加",flavors:["奶油","雪松","坚果","木质"],strength:"轻中等",price:"赠送估值 $8.00 / 支",stock:"待盘点",source:"赠送"},
     {id:40,brand:"Cohiba",name:"Behike BHK 56",origin:"古巴",flavors:["可可","咖啡","木质","香料"],strength:"中浓郁",price:"赠送估值 $500.00 / 支",stock:"待盘点",source:"赠送",note:"按用户确认记录为真品"},
