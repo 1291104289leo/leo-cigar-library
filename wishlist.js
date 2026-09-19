@@ -4,6 +4,33 @@ window.LEO_CIGAR_WISHLIST = {
   threshold: "公开盲评分 ≥92；单支价格 < $10；评测力度为 Medium 或更轻。店铺力度冲突单独提示。",
   items: [
     {
+      id:"gilberto-reserva-blanc-corona", name:"Oliva Gilberto Reserva Blanc Corona", size:"5.75 × 43",
+      score:"CA 92（2018）；复评 89（2025）", strength:"轻至中等（CA）；SP 2/5",
+      price:"$5.48", priceKind:"SP 促销单支价；常规 $6.17", status:"available",
+      flavor:"雪松、烘焙香料、可可；偏柔和",
+      sources:[{label:"CA 2018 原始评分",url:"https://www.cigaraficionado.com/ratings/20763/name/gilberto-oliva-reserva-blanc-5-75x43-corona"},{label:"CA 2025 复评 89",url:"https://www.cigaraficionado.com/ratings/25874/name/gilberto-oliva-reserva-blanc-5-75x43"}],
+      stores:[{label:"SP · 可加购 · $5.48/支",url:"https://www.smokingpipes.com/cigars/oliva/moreinfo.cfm?product_id=503589",state:"available"}],
+      note:"CA 2018 评 92；2020／2023／2025 又评 88／87／89，不将历史高分当作最新分数。SP 同尺寸、厄瓜多尔茄衣与茄套，价格为临时促销；结账前复核。"
+    },
+    {
+      id:"charter-oak-habano-lonsdale", name:"Foundation Charter Oak Habano Lonsdale", size:"6.25 × 46",
+      score:"CA 92（2021）；复评 90（2025）", strength:"中等（CA）；SP 3/5",
+      price:"$6.90", priceKind:"SP 当前单支价", status:"available",
+      flavor:"坚果、胡椒、甜卡布奇诺；中等力度",
+      sources:[{label:"CA 2021 原始评分",url:"https://www.cigaraficionado.com/ratings/22953/name/charter-oak-ct-habano-lonsdale-toro"},{label:"CA 2025 复评 90",url:"https://www.cigaraficionado.com/ratings/25910/name/charter-oak-ct-habano-lonsdale"}],
+      stores:[{label:"SP · 可加购 · $6.90/支",url:"https://www.smokingpipes.com/cigars/foundation-cigar-company/moreinfo.cfm?product_id=389987",state:"available"}],
+      note:"CA 的 CT Habano Lonsdale 与 SP 的 Charter Oak Habano Lonsdale 尺寸 6.25×46、厄瓜多尔茄衣及尼加拉瓜茄套／茄芯对应；Cigar Insider 2021 另评 92，CA 2025 复评 90。"
+    },
+    {
+      id:"charter-oak-connecticut-rothschild", name:"Foundation Charter Oak Connecticut Rothschild", size:"4.5 × 50",
+      score:"CA 93（2018）；复评 90（2024）", strength:"轻至中等（CA）；SP 3/5",
+      price:"$6.50", priceKind:"SP 当前单支价", status:"review",
+      flavor:"橡木香草、草本、腰果；短尺寸",
+      sources:[{label:"CA 2018 原始评分",url:"https://www.cigaraficionado.com/ratings/20773/name/charter-oak-ct-shade-rothschild-robusto"},{label:"CA 2024 复评 90",url:"https://www.cigaraficionado.com/ratings/24974/name/charter-oak-ct-shade-rothschild"}],
+      stores:[{label:"SP · 可加购 · $6.50/支",url:"https://www.smokingpipes.com/cigars/foundation-cigar-company/moreinfo.cfm?product_id=333824",state:"available"}],
+      note:"同名、同尺寸可加购；但 CA 2018 标美国康州遮荫茄衣，SP 商品参数标厄瓜多尔茄衣（SP 文案又称康州产），产地冲突。下单前核对当前批次，历史 93 不保证同一配方。"
+    },
+    {
       id:"cao-cameroon-robusto", name:"CAO Cameroon L’Anniversaire Robusto", size:"5 × 50",
       score:"BMP 93", strength:"中等（BMP）；70 标注 Mild+",
       price:"$7.63", priceKind:"70 当前单支价", status:"available",
