@@ -116,7 +116,7 @@ let activeFlavors=new Set;
 $("#flavors").innerHTML=flavorPool.map(f=>'<button class="chip" data-flavor="'+f+'">'+f+'</button>').join("");
 $("#flavors").addEventListener("click",e=>{const b=e.target.closest("[data-flavor]");if(!b)return;const f=b.dataset.flavor;activeFlavors.has(f)?activeFlavors.delete(f):activeFlavors.add(f);b.classList.toggle("active");renderCards()});
 
-function card(c){return '<article class="card" data-id="'+c.id+'"><div class="photo">'+(c.url?'<img loading="lazy" referrerpolicy="no-referrer" src="'+c.url+'" alt="'+c.brand+' '+c.name+'" onerror="this.style.display=\\\'none\\\'">':'')+'<span class="photo-badge">'+(c.status||"商品图")+'</span></div><div class="card-body"><div class="no">NO. '+String(c.id).padStart(2,"0")+'</div><div class="brand">'+c.brand+'</div><div class="name">'+c.name+'</div><div class="meta"><span class="tag">'+c.origin+'</span><span class="tag">'+c.strength+'</span>'+c.flavors.slice(0,3).map(f=>'<span class="tag">'+f+'</span>').join("")+'</div><div class="price">'+c.price+'</div><div class="stock">'+(c.knownQty?'记录数量：'+c.knownQty+' · ':'')+'现存：'+c.stock+'</div></div></article>'}
+function card(c){return '<article class="card" data-id="'+c.id+'"><div class="photo">'+(c.url?'<img loading="lazy" referrerpolicy="no-referrer" src="'+c.url+'" alt="'+c.brand+' '+c.name+'" onerror="this.style.display=\\\'none\\\'">':'')+'<span class="photo-badge">'+(c.status||"商品图")+'</span></div><div class="card-body"><div class="no">NO. '+String(c.id).padStart(2,"0")+'</div><div class="brand">'+c.brand+'</div><div class="name">'+c.name+'</div><div class="meta"><span class="tag">'+c.origin+'</span><span class="tag">'+c.strength+'</span>'+c.flavors.slice(0,3).map(f=>'<span class="tag">'+f+'</span>').join("")+'</div><div class="price">'+(c.retailPrice?'英国参考零售价 '+c.retailPrice:c.price)+'</div><div class="stock">'+(c.retailPrice?c.price+' · ':'')+(c.knownQty?'记录数量：'+c.knownQty+' · ':'')+'现存：'+c.stock+'</div></div></article>'}
 function renderCards(){
  const q=$("#q").value.trim().toLowerCase(), o=$("#origin").value, s=$("#strength").value;
  const list=cigars.filter(c=>{
@@ -151,6 +151,7 @@ function openDetail(id){
  (c.url?'<div class="modal-photo"><img referrerpolicy="no-referrer" src="'+c.url+'" alt="'+c.brand+' '+c.name+'"></div><div class="img-credit">图片：'+(c.source||"公开商品页")+' · '+(c.status||"商品图")+'</div>':"")+
  '<div class="meta">'+['NO. '+String(c.id).padStart(2,"0"),c.origin,c.strength,...c.flavors].map(x=>'<span class="tag">'+x+'</span>').join("")+'</div>'+
  '<div class="detail-grid">'+
+ (c.retailPrice?'<div class="detail"><small>英国参考零售价 · 截图 '+c.retailScreenshotDate+'</small><a href="'+c.retailUrl+'" target="_blank" rel="noopener noreferrer">'+c.retailPrice+' · '+c.retailSource+'</a></div>':'')+
  '<div class="detail"><small>价格 / 估值</small>'+c.price+'</div>'+
  '<div class="detail"><small>现存余量</small>'+c.stock+(c.knownQty?'<br><small>已知历史数量：'+c.knownQty+'</small>':'')+'</div>'+
  '<div class="detail"><small>购买时间</small>'+(c.purchaseDate||"待补录")+'</div>'+
