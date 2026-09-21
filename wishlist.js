@@ -1,8 +1,98 @@
-// 核对日期：2026-09-19。价格均按单支美元；评分、规格、库存见逐条原始链接。
+// 核对日期：2026-09-21。价格均按单支美元；评分、规格、库存见逐条原始链接。
 window.LEO_CIGAR_WISHLIST = {
-  checkedAt: "2026-09-19",
-  threshold: "公开盲评分 ≥92；单支价格 < $10；评测力度为 Medium 或更轻。店铺力度冲突单独提示。",
+  checkedAt: "2026-09-21",
+  threshold: "综合参考专业评分、零售商用户分与社区口碑；优先 SP / 70 单支约 $7 以内、力度 3/5 或 Medium 以下、Petit Corona / Corona / 短 Robusto 等较小尺寸。非准确规格的评分必须明确标为“系列参考”。",
   items: [
+    {
+      id:"charter-oak-connecticut-lonsdale", name:"Foundation Charter Oak Connecticut Lonsdale", size:"6.25 × 46",
+      score:"TCA 92（准确规格）", strength:"轻至中等；SP 3/5",
+      price:"$6.90", priceKind:"SP 当前单支价", status:"available",
+      flavor:"奶油、坚果、雪松、淡甜味；细环径",
+      sources:[{label:"TCA 92 评测",url:"https://thecigarauthority.com/charter-oak-connecticut-lonsdale-cigar-review/"},{label:"SmallBatch 规格与力度",url:"https://www.smallbatchcigar.com/charter-oak-ct-lonsdale"}],
+      stores:[{label:"SP · 可加购 · $6.90/支",url:"https://www.smokingpipes.com/cigars/foundation-cigar-company/moreinfo.cfm?product_id=333825",state:"available"}],
+      note:"本轮最符合“相对高分 + 轻中度 + 约 $7”的准确规格。长度略长，但 46 环径较细；与现有 Connecticut Petite Corona 不是同一尺寸。"
+    },
+    {
+      id:"charter-oak-habano-petite-corona", name:"Foundation Charter Oak Habano Petite Corona", size:"5.25 × 42",
+      score:"SP 用户 4.3/5（2）", strength:"中等；SP 3/5",
+      price:"$6.35", priceKind:"SP 当前单支价", status:"available",
+      flavor:"坚果、咖啡、雪松、柔和甜香；小尺寸",
+      sources:[{label:"Neptune 系列口碑",url:"https://www.neptunecigar.com/cigar/foundation-charter-oak-habano"}],
+      stores:[{label:"SP · 可加购 · $6.35/支",url:"https://www.smokingpipes.com/cigars/foundation-cigar-company/moreinfo.cfm?product_id=389985",state:"available"}],
+      note:"评分样本只有 2 条，因此只作相对口碑参考；尺寸与价格都很贴合，优先级高于同系列大尺寸。"
+    },
+    {
+      id:"charter-oak-habano-rothschild", name:"Foundation Charter Oak Habano Rothschild", size:"4.5 × 50",
+      score:"社区高口碑（非盲评分）", strength:"中等；SP 3/5",
+      price:"$6.50", priceKind:"SP 当前单支价", status:"available",
+      flavor:"烤坚果、雪松、淡咖啡甜感；短 Robusto",
+      sources:[{label:"Neptune 用户口碑",url:"https://www.neptunecigar.com/cigar/foundation-charter-oak-habano"}],
+      stores:[{label:"SP · 可加购 · $6.50/支",url:"https://www.smokingpipes.com/cigars/foundation-cigar-company/moreinfo.cfm?product_id=389986",state:"available"}],
+      note:"没有把 Lonsdale 的 CA 92 套用到 Rothschild；保留为短尺寸、低价的口碑候选。"
+    },
+    {
+      id:"fuente-exquisitos-natural", name:"Arturo Fuente Exquisitos Natural", size:"4.5 × 33",
+      score:"SP 3.7/5（38）；Top 50", strength:"中等；SP 3/5",
+      price:"$3.18", priceKind:"SP 当前单支价", status:"available",
+      flavor:"木质、坚果、淡甜香；末段可能略辛",
+      sources:[],
+      stores:[{label:"SP · 可加购 · $3.18/支",url:"https://www.smokingpipes.com/cigars/fuente/moreinfo.cfm?product_id=26286",state:"available"}],
+      note:"价格最低、尺寸很小；你现有的是 Exquisitos Maduro，这款 Natural 不算准确同款。评分不算顶高，列为低成本试抽。"
+    },
+    {
+      id:"fuente-gran-reserva-petit-corona-natural", name:"Arturo Fuente Gran Reserva Petit Corona Natural", size:"5 × 38",
+      score:"SP 3.0/5（1）；品牌口碑款", strength:"轻；SP 2/5",
+      price:"$6.93", priceKind:"SP 当前单支价", status:"available",
+      flavor:"柔和木质、奶油、淡坚果；无明显杂味",
+      sources:[{label:"Neptune 商品与用户口碑",url:"https://www.neptunecigar.com/cigars/arturo-fuente-petit-corona"}],
+      stores:[{label:"SP · 可加购 · $6.93/支",url:"https://www.smokingpipes.com/cigars/fuente/moreinfo.cfm?product_id=26293",state:"available"}],
+      note:"准确规格只有 1 条 SP 评分，不能当高分证据；但力度 2/5、5×38 很贴合，作为尺寸优先的稳妥候选。"
+    },
+    {
+      id:"oliva-connecticut-reserve-petit-corona", name:"Oliva Connecticut Reserve Petit Corona", size:"4 × 38",
+      score:"CA 87；Atlantic 5/5（2）", strength:"轻；SP 2/5",
+      price:"$5.60", priceKind:"SP 促销单支价；常规 $6.30", status:"available",
+      flavor:"奶油、雪松、轻咖啡、柔和甜感；短时段",
+      sources:[{label:"CA 准确规格 87",url:"https://www.cigaraficionado.com/ratings/24475/name/oliva-connecticut-reserve-petit-corona-petit-corona"},{label:"Atlantic 用户 5/5（2）",url:"https://atlanticcigar.com/oliva-connecticut-reserve-petit-corona/"}],
+      stores:[{label:"SP · 可加购 · $5.60/支",url:"https://www.smokingpipes.com/cigars/oliva/moreinfo.cfm?product_id=293022",state:"available"}],
+      note:"CA 分数不是 90+，但第三方用户反馈高、力度和尺寸非常匹配；与现有 Connecticut Reserve Robusto 不是同一尺寸。"
+    },
+    {
+      id:"gilberto-reserva-blanc-robusto", name:"Oliva Gilberto Reserva Blanc Robusto", size:"5 × 50",
+      score:"系列参考：Corona 曾获 CA 92", strength:"轻；SP 2/5",
+      price:"$6.00", priceKind:"SP 促销单支价；常规 $6.75", status:"available",
+      flavor:"雪松、烘焙香料、可可、柔和奶油感",
+      sources:[{label:"同系列 Corona CA 92（仅参考）",url:"https://www.cigaraficionado.com/ratings/20763/name/gilberto-oliva-reserva-blanc-5-75x43-corona"}],
+      stores:[{label:"SP · 可加购 · $6.00/支",url:"https://www.smokingpipes.com/cigars/oliva/moreinfo.cfm?product_id=503588",state:"available"},{label:"70 · 同规格页（库存复核）",url:"https://70cigars.com/en-jp/products/oliva-gilberto-reserva-blanc-robusto",state:"review"}],
+      note:"CA 92 属同系列 Corona，不能当作 Robusto 的准确分数；保留因为力度、价格与 5×50 尺寸都合适。"
+    },
+    {
+      id:"nica-rustica-connecticut-shade-short-robusto", name:"Drew Estate Nica Rustica Connecticut Shade Short Robusto", size:"4.5 × 50",
+      score:"Cigars Daily 4.75/5（4）", strength:"轻至中等",
+      price:"$6.75", priceKind:"SP 促销单支价；常规 $7.50", status:"available",
+      flavor:"奶油、雪松、甜干草；短 Robusto",
+      sources:[{label:"Cigars Daily 用户评分",url:"https://cigarsdaily.com/product/nica-rustica-connecticut-shade-short-robusto-4-5x50/"},{label:"力度与风味资料",url:"https://thecigarbarn.com/nica-rustica-connecticut-shade-robusto/"}],
+      stores:[{label:"SP · 可加购 · $6.75/支",url:"https://www.smokingpipes.com/cigars/drew-estate/moreinfo.cfm?product_id=698077",state:"available"}],
+      note:"准确规格用户分较高但样本仅 4 条；价格与尺寸符合，口味也比 Broadleaf 版本更贴近你的偏好。"
+    },
+    {
+      id:"macanudo-gold-label-ascots-10", name:"Macanudo Gold Label Ascots（10支装）", size:"4.19 × 32",
+      score:"新品暂无用户分；品牌口碑候选", strength:"轻；SP 2/5",
+      price:"$2.68/支", priceKind:"SP $26.79/10支；需整听购买", status:"available",
+      flavor:"顺滑奶油、淡木质、柔和甜感；快速短茄",
+      sources:[],
+      stores:[{label:"SP · 可加购 · $26.79/10支",url:"https://www.smokingpipes.com/cigars/Macanudo/moreinfo.cfm?product_id=738439",state:"available"}],
+      note:"单支折算很低、尺寸最小，适合短时段；但没有用户评分且需买 10 支，因此列为价格型候补而非高分首选。"
+    },
+    {
+      id:"oliva-serie-g-cameroon-special-g", name:"Oliva Serie G Cameroon Special G", size:"3.75 × 48",
+      score:"SP 3.4/5（6）", strength:"中等；SP 3/5",
+      price:"$5.04", priceKind:"SP 促销单支价；常规 $5.67", status:"available",
+      flavor:"咖啡、烟熏雪松、坚果；短尺寸",
+      sources:[{label:"Cigar Chief 用户 5/5（1）",url:"https://cigarchief.com/shop/oliva-serie-g-special-g/"}],
+      stores:[{label:"SP · 可加购 · $5.04/支",url:"https://www.smokingpipes.com/cigars/oliva/moreinfo.cfm?product_id=31059",state:"available"}],
+      note:"评分中等且末段可能升温发辣，优先级低于 Connecticut / Charter Oak；优势是便宜、短小，可低成本试一支。"
+    },
     {
       id:"gilberto-reserva-blanc-corona", name:"Oliva Gilberto Reserva Blanc Corona", size:"5.75 × 43",
       score:"CA 92（2018）；复评 89（2025）", strength:"轻至中等（CA）；SP 2/5",
