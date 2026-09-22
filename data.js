@@ -2,7 +2,7 @@ window.LEO_CIGAR_DATA = {
   meta: {
     title: "Leo Cigar Library",
     subtitle: "THE CIGAR ARCHIVE · 私人收藏 / 2026",
-    verifiedAt: "2026-09-16",
+    verifiedAt: "2026-09-22",
     confirmedVarieties: 47,
     notes: "历史购买量不等于现存余量；当前余量未逐支盘点的款式统一标记为“待盘点”。"
   },
@@ -13,7 +13,7 @@ window.LEO_CIGAR_DATA = {
     profile: "偏淡至中等，喜欢奶油、木质、雪松、甜感；补充偏好雪松更多、甜感更多、蜂蜜感、轻花香。"
   },
   inventorySummary: [
-    {label:"确认收藏款式", value:"47 款", note:"旧站 v3 已核对"},
+    {label:"确认收藏款式", value:"47 款", note:"2026-09-22 更新；Joya Black 已确认实物到货"},
     {label:"Smokingpipes 历史", value:"16 单 / 25 SKU / 69 支", note:"2026-08-25 重新逐单核算"},
     {label:"意大利 Toscano/Toscanello", value:"14 盒", note:"榛子4、烈酒4、红原2、原味2、调甜2"},
     {label:"Drew Estate Sun Blessed", value:"10 支", note:"1盒10支，已纠正此前 CAO Solfyre 误识别"},
@@ -51,7 +51,8 @@ window.LEO_CIGAR_DATA = {
     {date:"2026-09-09", title:"SP 两单确认", detail:"两单均记录为 2026-08-24 发货；含 AF Brevas Royale Natural、Baccarat Luchadores/Toro、AF Exquisitos Maduro、RP The Edge CT Robusto、Punch Clasico Maduro London Club、Tatuaje Reserva Petite Cazadores、Tatuaje Series P Honduras Short Robusto、Curivari BV F50 CT、Rojas Breakfast Tacos CT。"},
     {date:"2026-09-12", title:"70Cigars 包裹到货", detail:"旧站已纳入 White Heather、Hambones、Dominican Cream 等5个SKU；数量按订单/实物继续盘点。"},
     {date:"2026-09-12", title:"舅舅赠送新增", detail:"旧站 v3 已并入赠送系列并以市场估值显示；BHK 56 按用户确认“真品”记录。"},
-    {date:"2026-09-16", title:"旧站 v3 核对", detail:"47款确认收藏；商品图优先SP/70；待核型号独立标注。"}
+    {date:"2026-09-16", title:"旧站 v3 核对", detail:"47款确认收藏；商品图优先SP/70；待核型号独立标注。"},
+    {date:"2026-09-22", title:"SP 到货入库", detail:"Joya de Nicaragua Joya Black Cigarillos 10 Pack ×1盒（10支）确认实物到货；订单 No. 3934946，2026-09-02 发货。"}
   ],
   cigars: [
     {id:1,brand:"Macanudo",name:"Court Café",origin:"多米尼加",flavors:["奶油","坚果","木质","甜感"],strength:"轻柔",price:"$5.86 / 支",stock:"待盘点"},
@@ -79,7 +80,7 @@ window.LEO_CIGAR_DATA = {
     {id:23,brand:"Montesino",name:"Napoleon Grande Natural",origin:"多米尼加",flavors:["奶油","雪松","木质","坚果"],strength:"轻柔",price:"$5.74 / 支",stock:"待盘点",note:"70站 Natural 系列图；订单规格 7½×46"},
     {id:24,brand:"Alec Bradley",name:"Project 40 Toro · 06.52",origin:"尼加拉瓜",flavors:["坚果","木质","咖啡","甜感"],strength:"中等",price:"$7.27 / 支",stock:"待盘点"},
     {id:25,brand:"Rojas",name:"Breakfast Tacos Connecticut",origin:"尼加拉瓜",flavors:["奶油","坚果","咖啡","香料"],strength:"中等",price:"$7.07 / 支",stock:"待盘点"},
-    {id:26,brand:"Joya de Nicaragua",name:"Joya Black Cigarillos · 10支装",origin:"尼加拉瓜",flavors:["可可","咖啡","木质","香料"],strength:"中浓郁",price:"$1.85 / 支",stock:"待盘点",knownQty:"10支装订单记录",purchaseDate:"2026-09-01",shipDate:"2026-09-02",note:"订单 No. 3934946；订单总额 $18.47"},
+    {id:26,brand:"Joya de Nicaragua",name:"Joya Black Cigarillos · 10支装",origin:"尼加拉瓜",flavors:["可可","咖啡","木质","香料"],strength:"中浓郁",price:"$1.85 / 支",stock:"10支 / 1盒 · 已到货",knownQty:"10支 / 1盒",purchaseDate:"2026-09-01",shipDate:"2026-09-02",arrivalDate:"2026-09-22",source:"Smokingpipes",note:"2026-09-22 实物与装箱单确认到货；Smokingpipes Item No. 007-016-0058；订单 No. 3934946；订单总额 $18.47"},
     {id:27,brand:"Joya de Nicaragua",name:"Joya Red Cigarillos · 10支装",origin:"尼加拉瓜",flavors:["雪松","坚果","香料","甜感"],strength:"中等",price:"$1.85 / 支",stock:"待盘点"},
     {id:28,brand:"White Heather",name:"Torpedo",origin:"尼加拉瓜",flavors:["奶油"],strength:"浓郁",price:"$4.31 / 支",stock:"待盘点",arrivalDate:"2026-09-12",note:"70Cigars 包裹"},
     {id:29,brand:"Hambones",name:"Habano Torpedo",origin:"洪都拉斯",flavors:["木质","香料","甜感"],strength:"中等",price:"$3.82 / 支",stock:"待盘点",arrivalDate:"2026-09-12",note:"70Cigars 包裹"},
