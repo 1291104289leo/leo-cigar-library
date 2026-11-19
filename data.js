@@ -2,8 +2,8 @@ window.LEO_CIGAR_DATA = {
   meta: {
     title: "Leo Cigar Library",
     subtitle: "THE CIGAR ARCHIVE · 私人收藏 / 2026",
-    verifiedAt: "2026-09-22",
-    confirmedVarieties: 47,
+    verifiedAt: "2026-11-19",
+    confirmedVarieties: 55,
     notes: "历史购买量不等于现存余量；当前余量未逐支盘点的款式统一标记为“待盘点”。"
   },
   preferences: {
@@ -13,7 +13,8 @@ window.LEO_CIGAR_DATA = {
     profile: "偏淡至中等，喜欢奶油、木质、雪松、甜感；补充偏好雪松更多、甜感更多、蜂蜜感、轻花香。"
   },
   inventorySummary: [
-    {label:"确认收藏款式", value:"47 款", note:"2026-09-22 更新；Joya Black 已确认实物到货"},
+    {label:"确认收藏款式", value:"55 款", note:"2026-11-19 更新；新增8个具体型号条目（原赠送 New Wave 尺寸待确认，暂分开）"},
+    {label:"本批 SP 入库", value:"5 单 / 9 SKU / 33 支", note:"2026-11-19 登记；常规13支，小雪茄20支；不是实时余量"},
     {label:"Smokingpipes 历史", value:"16 单 / 25 SKU / 69 支", note:"2026-08-25 重新逐单核算"},
     {label:"意大利 Toscano/Toscanello", value:"14 盒", note:"榛子4、烈酒4、红原2、原味2、调甜2"},
     {label:"Drew Estate Sun Blessed", value:"10 支", note:"1盒10支，已纠正此前 CAO Solfyre 误识别"},
@@ -52,13 +53,14 @@ window.LEO_CIGAR_DATA = {
     {date:"2026-09-12", title:"70Cigars 包裹到货", detail:"旧站已纳入 White Heather、Hambones、Dominican Cream 等5个SKU；数量按订单/实物继续盘点。"},
     {date:"2026-09-12", title:"舅舅赠送新增", detail:"旧站 v3 已并入赠送系列并以市场估值显示；BHK 56 按用户确认“真品”记录。"},
     {date:"2026-09-16", title:"旧站 v3 核对", detail:"47款确认收藏；商品图优先SP/70；待核型号独立标注。"},
-    {date:"2026-09-22", title:"SP 到货入库", detail:"Joya de Nicaragua Joya Black Cigarillos 10 Pack ×1盒（10支）确认实物到货；订单 No. 3934946，2026-09-02 发货。"}
+    {date:"2026-09-22", title:"SP 到货入库", detail:"Joya de Nicaragua Joya Black Cigarillos 10 Pack ×1盒（10支）确认实物到货；订单 No. 3934946，2026-09-02 发货。"},
+    {date:"2026-11-19", title:"SP 五单到货登记", detail:"SP-2026-11-19-5orders；10-09：Gurkha 三款各1支；10-20：AF Brevas Royal Maduro、Fratello Camo Sweet Toro、Casa Carrillo New Wave Connecticut Stellas 各1支；11-02：AF Brevas Royal Maduro、Curivari Favoritos 54 Connecticut、56 Maduro 各1支；11-05 A：AF Brevas Royal Maduro ×4；11-05 B：Punch Miniatures 20 Pack ×1盒。合计33支，实际到货日及购买费用待补录。"}
   ],
   cigars: [
     {id:1,brand:"Macanudo",name:"Court Café",origin:"多米尼加",flavors:["奶油","坚果","木质","甜感"],strength:"轻柔",price:"$5.86 / 支",stock:"待盘点"},
     {id:2,brand:"Foundation",name:"Charter Oak Connecticut Petite Corona",origin:"尼加拉瓜",flavors:["奶油","木质","香料"],strength:"中等",price:"$7.98 / 支",stock:"待盘点"},
     {id:3,brand:"Perdomo",name:"10th Anniversary Champagne Robusto",origin:"尼加拉瓜",flavors:["奶油","雪松","甜感","木质"],strength:"轻中等",price:"$11.77 / 支",stock:"待盘点"},
-    {id:4,brand:"Arturo Fuente",name:"Brevas Royal Maduro",origin:"多米尼加",flavors:["木质","香料","可可","咖啡"],strength:"中等",price:"$4.55 / 支",stock:"待盘点"},
+    {id:4,brand:"Arturo Fuente",name:"Brevas Royal Maduro",origin:"多米尼加",flavors:["木质","香料","可可","咖啡"],strength:"中等",price:"$4.55 / 支",stock:"待盘点",knownQty:"本批新增6支（不含此前历史购买）",source:"Smokingpipes",note:"2026-11-19 批次入库；SKU 007-041-0101；10-20 ×1、11-02 ×1、11-05 ×4；历史数量保留，本批价格及实际到货日期待补录。"},
     {id:5,brand:"Fireball",name:"Corona",origin:"多米尼加",flavors:["香料","甜感","木质"],strength:"中等",price:"$6.64 / 支",stock:"待盘点",purchaseDate:"2026-08-01"},
     {id:6,brand:"Brick House",name:"Double Connecticut Robusto",origin:"尼加拉瓜",flavors:["雪松","奶油","甜感","香料"],strength:"轻中等",price:"$10.00 / 支",stock:"待盘点",purchaseDate:"2026-08-01"},
     {id:7,brand:"Zino",name:"Nicaragua Mini Cigarillos",origin:"多米尼加",flavors:["香料","木质","甜感"],strength:"中等",price:"$0.75 / 支",stock:"待盘点"},
@@ -101,7 +103,15 @@ window.LEO_CIGAR_DATA = {
     {id:44,brand:"Toscanello",name:"Aroma Grappa · 小盒（暂定）",origin:"意大利",flavors:["甜感","木质","香料"],strength:"中等",price:"$9.04 / 盒",stock:"4盒历史购买",knownQty:"4盒",note:"最可能对应“烈酒味”，仍需包装确认"},
     {id:45,brand:"Toscanello",name:"Rosso · 小盒（暂定）",origin:"意大利",flavors:["咖啡","甜感","木质"],strength:"中等",price:"$9.05 / 盒",stock:"2盒历史购买",knownQty:"2盒",note:"“红原”仍需实物确认"},
     {id:46,brand:"Toscano",name:"Originale · 大盒（暂定）",origin:"意大利",flavors:["木质","咖啡","香料"],strength:"浓郁",price:"$9.05 / 盒",stock:"2盒历史购买",knownQty:"2盒",note:"具体包装待核"},
-    {id:47,brand:"Toscano",name:"自然甜感 · 大盒（系列待核）",origin:"意大利",flavors:["甜感","木质","香料","咖啡"],strength:"中等",price:"$9.05 / 盒",stock:"2盒历史购买",knownQty:"2盒",note:"旧站使用 Garibaldi 甜润风格参考图，不代表确认型号"}
+    {id:47,brand:"Toscano",name:"自然甜感 · 大盒（系列待核）",origin:"意大利",flavors:["甜感","木质","香料","咖啡"],strength:"中等",price:"$9.05 / 盒",stock:"2盒历史购买",knownQty:"2盒",note:"旧站使用 Garibaldi 甜润风格参考图，不代表确认型号"},
+    {"id":48,"brand":"Punch","name":"Miniatures (20 Pack)","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批20支 / 1盒","purchaseDate":"2026-11-05","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-023-0077；实际到货日期、价格待补录。"},
+    {"id":49,"brand":"Fratello","name":"Camo Sweet Toro","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-10-20","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-794-0032；实际到货日期、价格待补录。"},
+    {"id":50,"brand":"Casa Carrillo","name":"New Wave Connecticut Stellas","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-10-20","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-465-0021；实际到货日期、价格待补录。旧赠送 New Wave Connecticut 尺寸待确认，暂不合并。"},
+    {"id":51,"brand":"Gurkha","name":"Castle Hall Connecticut Robusto","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-10-09","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-028-0091；实际到货日期、价格待补录。"},
+    {"id":52,"brand":"Gurkha","name":"Grand Age II Connecticut Toro","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-10-09","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-028-0124；实际到货日期、价格待补录。"},
+    {"id":53,"brand":"Gurkha","name":"Grand Age II Habano Toro","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-10-09","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-028-0125；实际到货日期、价格待补录。"},
+    {"id":54,"brand":"Curivari","name":"Buenaventura Favoritos 54 Connecticut","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-11-02","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-846-0074；实际到货日期、价格待补录。"},
+    {"id":55,"brand":"Curivari","name":"Buenaventura Favoritos 56 Maduro","origin":"待核实","flavors":["待核实"],"strength":"待核实","price":"待补录","stock":"待盘点","knownQty":"本批1支","purchaseDate":"2026-11-02","source":"Smokingpipes","note":"2026-11-19 登记入库；SKU 007-846-0077；实际到货日期、价格待补录。"}
   ]
 };
 
